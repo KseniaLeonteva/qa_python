@@ -16,7 +16,6 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.header_login))
         assert driver.find_element(*Locators.header_login).text == 'Вход'
-        driver.quit()
 
 
     #Регистрация без Имя
@@ -27,7 +26,6 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.registration_button))
         assert driver.find_element(*Locators.header_registration).text == 'Регистрация'
-        driver.quit()
 
 
     #Регистрация без Email
@@ -38,7 +36,6 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.registration_button))
         assert driver.find_element(*Locators.header_registration).text == 'Регистрация'
-        driver.quit()
 
 
     # Регистрация без Пароль
@@ -49,7 +46,6 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.registration_button))
         assert driver.find_element(*Locators.header_registration).text == 'Регистрация'
-        driver.quit()
 
 
     #Регистрация с паролем менее 6 символов
@@ -62,7 +58,6 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.header_incorrect_password))
         assert driver.find_element(*Locators.header_incorrect_password).text == 'Некорректный пароль'
-        driver.quit()
 
 
     #Регистрация с Email вне формата логин@домен
@@ -75,7 +70,6 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.header_exist_user))
         assert driver.find_element(*Locators.header_exist_user).text == 'Такой пользователь уже существует'
-        driver.quit()
 
 
     #Регистрация уже существующего пользователя
@@ -87,5 +81,4 @@ class TestRegistration:
         driver.find_element(*Locators.registration_button).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(Locators.header_exist_user))
         assert driver.find_element(*Locators.header_exist_user).text == 'Такой пользователь уже существует'
-        driver.quit()
 

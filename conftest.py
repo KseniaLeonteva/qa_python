@@ -8,4 +8,5 @@ def driver():
     driver = webdriver.Chrome()
     driver.get(Url.main_page)
     yield driver
+    driver.quit()
 

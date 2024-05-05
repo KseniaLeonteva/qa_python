@@ -15,7 +15,6 @@ class TestLogin:
         driver.find_element(*Locators.login_button_login_page).click()
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(Locators.order_button))
         assert driver.find_element(*Locators.order_button).is_displayed()
-        driver.quit()
 
 
     #Вход через кнопку «Личный кабинет»
@@ -27,7 +26,6 @@ class TestLogin:
         driver.find_element(*Locators.login_button_login_page).click()
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(Locators.order_button))
         assert driver.find_element(*Locators.order_button).is_displayed()
-        driver.quit()
 
 
     #Вход через кнопку в форме регистрации
@@ -39,7 +37,6 @@ class TestLogin:
         driver.find_element(*Locators.login_button_login_page).click()
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(Locators.order_button))
         assert driver.find_element(*Locators.order_button).is_displayed()
-        driver.quit()
 
 
     #Вход через кнопку в форме восстановления пароля
@@ -53,5 +50,4 @@ class TestLogin:
         driver.find_element(*Locators.login_button_login_page).click()
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(Locators.order_button))
         assert driver.find_element(*Locators.order_button).is_displayed()
-        driver.quit()
 

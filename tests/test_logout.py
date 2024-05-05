@@ -19,5 +19,4 @@ class TestLogout:
         driver.find_element(*Locators.logout_button).click()
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(Locators.header_login))
         assert driver.current_url == Url.login_page
-        driver.quit()
 

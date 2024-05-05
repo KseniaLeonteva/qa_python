@@ -15,5 +15,4 @@ class TestPersonalAccount:
         driver.find_element(*Locators.account_button).click()
         WebDriverWait(driver, 6).until(expected_conditions.visibility_of_element_located(Locators.header_profile))
         assert driver.current_url == Url.profile_page
-        driver.quit()
 

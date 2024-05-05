@@ -14,7 +14,6 @@ class TestConstructor:
         driver.find_element(*Locators.buns_span).click()
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(Locators.buns_span))
         assert driver.find_element(*Locators.active_div_in_constructor).text == 'Булки'
-        driver.quit()
 
 
     #Переход к разделу "Соусы"
@@ -23,7 +22,6 @@ class TestConstructor:
         driver.find_element(*Locators.sauces_span).click()
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(Locators.sauces_span))
         assert driver.find_element(*Locators.active_div_in_constructor).text == 'Соусы'
-        driver.quit()
 
 
     # Переход к разделу "Начинки"
@@ -32,5 +30,4 @@ class TestConstructor:
         driver.find_element(*Locators.fil_span).click()
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(Locators.fil_span))
         assert driver.find_element(*Locators.active_div_in_constructor).text == 'Начинки'
-        driver.quit()
 

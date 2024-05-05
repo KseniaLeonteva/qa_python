@@ -18,7 +18,6 @@ class TestConstructorCross:
         driver.find_element(*Locators.constructor_button).click()
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(Locators.pack_burger))
         assert driver.find_element(*Locators.pack_burger).is_displayed()
-        driver.quit()
 
 
     #Переход по клику на лого "Stellar Burgers"
@@ -33,5 +32,4 @@ class TestConstructorCross:
         driver.find_element(*Locators.logo).click()
         WebDriverWait(driver, 5).until(expected_conditions.visibility_of_element_located(Locators.pack_burger))
         assert driver.find_element(*Locators.pack_burger).is_displayed()
-        driver.quit()
 

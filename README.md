@@ -16,7 +16,7 @@
 * `test_registration_without_password` - регистрация без пароля
 * `test_registration_password_less_6_symbols` - регистрация с невалидным паролем
 * `test_registration_with_incorrect_email` - регистрация с некорректным email
-* `test_registration_with_exist_user - регистрация уже существующего пользователя
+* `test_registration_with_exist_user` - регистрация уже существующего пользователя
 
 
 ### Вход в аккаунт - ***test_login.py***
